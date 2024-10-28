@@ -100,6 +100,4 @@ If you find any issues or have suggestions for improvements, feel free to open a
 
 ### Developer
 
-Me ***Shobhit Singh***
-
-
+***Shobhit Singh***
