@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        background-color: #1a1a1a;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      h1 {
+        margin-bottom: 0.5rem;
+        font-size: 2.5rem;
+        text-align: center;
+        text-shadow: 0 0 10px #ffa500, 0 0 20px #ffa500;
+      }
+      h2 {
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        text-align: center;
+        color: #ccc;
+      }
+      .upload-container {
+        background-color: #333;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        width: 500px;
+        text-align: center;
+      }
+      .file-link {
+        color: #ffa500;
+        margin: 1rem 0;
+        font-size: 1.2rem;
+        transition: transform 0.3s;
+      }
+      .file-link:hover {
+        transform: scale(1.1);
+      }
+      input[type="file"],
+      input[type="password"] {
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        border-radius: 4px;
+        border: 1px solid #ffa500;
+        width: calc(100% - 1rem);
+        background-color: #555;
+        color: #fff;
+      }
+      button {
+        background-color: #ffa500;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100%;
+      }
+      button:hover {
+        background-color: #ff8c00;
+      }
+      .copy-button {
+        margin-top: 1rem;
+        background-color: #007bff;
+      }
+      .password-container {
+        background-color: #444;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+        text-align: left;
+      }
+      .eye-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+    </style>
+    <title>𝗙𝗶𝗹𝗲 𝗨𝗽𝗹𝗼𝗮𝗱</title>
+  </head>
+  <body>
+    <h1>𝐅𝐢𝐥𝐞 𝐅𝐨𝐥𝐢𝐨</h1>
+    <h2>𝙁𝙞𝙡𝙚 𝙎𝙝𝙖𝙧𝙞𝙣𝙜 𝙎𝙞𝙢𝙥𝙡𝙞𝙛𝙞𝙚𝙙</h2>
+    <div class="upload-container">
+      <% if (locals.fileLink != null) { %>
+      <div class="file-link">𝚈𝚘𝚞𝚛 𝚏𝚒𝚕𝚎 𝚒𝚜 𝚞𝚙𝚕𝚘𝚊𝚍𝚎𝚍:</div>
+      <div class="file-link">
+        <a href="<%= locals.fileLink %>" style="color: #ffa500"
+          ><%= locals.fileLink %></a
+        >
+      </div>
+      <button
+        class="copy-button"
+        onclick="copyToClipboard('<%= locals.fileLink %>')"
+      >
+        <i class="fas fa-copy"></i>𝘾𝙤𝙥𝙮 𝙇𝙞𝙣𝙠
+      </button>
+      <% } %>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" id="file" name="file" required />
+        <label for="password">𝐏𝐚𝐬𝐬𝐰𝐨𝐫𝐝:</label>
+        <div style="position: relative">
+          <input type="password" id="password" name="password" required />
+          <i class="fas fa-eye eye-icon" id="togglePassword"></i>
+        </div>
+        <button type="submit">𝐒𝐡𝐚𝐫𝐞<i class="fas fa-share-square"></i></button>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("togglePassword")
+        .addEventListener("click", function () {
+          const passwordInput = document.getElementById("password");
+          const type =
+            passwordInput.getAttribute("type") === "password"
+              ? "text"
+              : "password";
+          passwordInput.setAttribute("type", type);
+          this.classList.toggle("fa-eye-slash");
+        });
+
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(
+          () => {
+            alert("Link copied to clipboard!");
+          },
+          () => {
+            alert("Failed to copy the link.");
+          }
+        );
+      }
+    </script>
+  </body>
+</html>
