@@ -18,7 +18,8 @@ File Folio is a simple file sharing application that allows users to upload file
 
 git clone
 ```bash
-https://github.com/your-username/file-folio.git ```
+https://github.com/your-username/file-folio.git
+ ```
 
 
 2. Install the dependencies:
