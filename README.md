@@ -1,4 +1,3 @@
-
 # File Folio
 
 ## File Sharing Simplified
@@ -22,16 +21,21 @@ git clone https://github.com/your-username/file-folio.git
 
 2. Install the dependencies:
 
-cd file-folio
-npm install
+```bash
+  cd file-folio
+  npm install
+```
 
 
 3. Set up the environment variables:
 
 Create a `.env` file in the root directory of the project and add the following variables:
 
-DATABASE_URL=mongodb://localhost:27017/fileSharing
-PORT=3000
+```bash
+DATABASE_URL= mongodb://localhost:27017/fileSharing
+PORT = 3000
+```
+
 
 4. Start the server:
 
