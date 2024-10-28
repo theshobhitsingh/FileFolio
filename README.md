@@ -44,8 +44,7 @@ PORT = 3000
 npm start
 ```
 
-5. 
-The application will be running on `http://localhost:3000`.
+5. The application will be running on `http://localhost:3000`.
 
 ### Usage
 
