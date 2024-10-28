@@ -1,5 +1,4 @@
-# File Folio
-***File Sharing Simplified***
+# File Folio: ***File Sharing Simplified***
 
 File Folio is a dynamic file sharing application that allows users to upload files and share them with others. The application is built using Node.js, Express, and MongoDB.
 
@@ -95,6 +94,4 @@ Together, these technologies create a powerful stack for File Folio, enabling se
 
 If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
 
-### Developer
-
-***Shobhit Singh***
+### Developer: ***Shobhit Singh***
