@@ -54,7 +54,7 @@ npm start
 
 ### Screenshots
 
-![File Folio Homepage](https://i.imgur.com/XYZ123.png)
+![File Folio Homepage](https://github.com/theshobhitsingh/FileFolio/blob/main/File%20Folio%20Images/File%20Folio.png?raw=true)
 ![File Download Page](https://i.imgur.com/ABC456.png)
 
 ### Technologies Used
