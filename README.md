@@ -31,7 +31,7 @@ git clone https://github.com/your-username/file-folio.git
 
 3. Set up the environment variables:
 
-Create a `.env` file in the root directory of the project and add the following variables:
+**Create a `.env` file** in the root directory of the project and add the following variables:
 
 ```bash
 DATABASE_URL= mongodb://localhost:27017/fileSharing
