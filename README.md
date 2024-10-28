@@ -40,8 +40,9 @@ PORT = 3000
 
 
 4. Start the server:
-
+```bash
 npm start
+```
 
 5. 
 The application will be running on `http://localhost:3000`.
