@@ -20,14 +20,12 @@ File Folio is a simple file sharing application that allows users to upload file
 git clone https://github.com/your-username/file-folio.git
  ```
 
-
 2. Install the dependencies:
 
 ```bash
   cd file-folio
   npm install
 ```
-
 
 3. Set up the environment variables:
 
@@ -37,7 +35,6 @@ git clone https://github.com/your-username/file-folio.git
 DATABASE_URL= mongodb://localhost:27017/fileSharing
 PORT = 3000
 ```
-
 
 4. Start the server:
 ```bash
